@@ -5,7 +5,9 @@ import "dotenv/config.js";
 import userroutes from "./routes/user.route.js";
 import cookieParser from "cookie-parser";
 const app= express();
+import cors from "cors";
 
+app.use(cors());    
 connect();
 app.use(morgan('dev'));
 app.use(express.json());

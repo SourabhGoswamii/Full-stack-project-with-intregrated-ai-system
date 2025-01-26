@@ -13,6 +13,7 @@ export const createusercontroller = async (req,res) => {
         const {email,password} = req.body;
         const user = await userService.createUser({email,password});
         const token = await user.generateToken();
+        delete user._doc.password;
         res.status(201).json({user,token});
     }
     catch (error) {
