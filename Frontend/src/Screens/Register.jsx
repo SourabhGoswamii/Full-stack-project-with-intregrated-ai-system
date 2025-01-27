@@ -12,7 +12,7 @@ const Register = () => {
 
     function sumithandler(e) {
         e.preventDefault();
-        axiosInstance.post('http://localhost:5000/user/register',{email,password}).then((res)=>{
+        axiosInstance.post('/user/register',{email,password}).then((res)=>{
             console.log(res.data);
 
             localStorage.setItem('token',res.data.token);

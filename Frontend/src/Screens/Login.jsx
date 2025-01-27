@@ -14,7 +14,7 @@ const Login = () => {
 
     function submitHandler(e) {
         e.preventDefault();
-        axiosInstance.post(`http://localhost:5000/user/login`, { email, password }).then((res) => {
+        axiosInstance.post('/user/login', { email, password }).then((res) => {
             console.log(res.data);
 
             localStorage.setItem('token', res.data.token);
