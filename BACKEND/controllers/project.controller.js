@@ -1,10 +1,9 @@
-import projectModel from "../models/project.model";
-import projectServices from "../services/project.service";
+import * as projectServices from '../services/project.service.js';
 import {validationResult} from "express-validator";
-import userModels from "../models/user.model";
+import userModels from "../models/user.model.js";
 
 
-export const createProject = async (req, res) => {
+export const createproject = async (req, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
